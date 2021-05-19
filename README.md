@@ -126,13 +126,16 @@ It contains apis in Golang to scrape web pages and persist them in mysql db.
 **Query Params:**
 
 ```json
-{
-        "title": "Logitech G203 Wired Gaming Mouse, 8,000 DPI, Rainbow Optical Effect LIGHTSYNC RGB, 6 Programmable Buttons, On-Board Memory, Screen Mapping, PC/Mac Computer and Laptop Compatible - Black",
-        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61UxfXTUyvL.__AC_SX300_SY300_QL70_ML2_.jpg",
-        "description": "World’s No.1 Best Selling Gaming Gear Brand - Based on independent aggregated sales data (FEB ‘19 - FEB’20) of Gaming Keyboard, Mice, & PC Headset in units from: US, CA, CN, JP, KR, TW, TH, ID, DE, FR, RU, UK, SE.",
-        "price": "$29.54",
-        "total_reviews": "6049"
+ {
+    "title": "Logditedsdfsdfdsch G203 Wired Gaming Mouse, 8,000 DPI, Rainbow Optical Effect LIGHTSYNC RGB, 6 Programmable dasdsdButtonsd, Onsadasd-Board Memory, Screen Mapping, PC/Mac Computer and Laptop Compatible - Black",
+    "image_url": "https:d//images-nasasda.ssldsfsdf-images-amazon.com/images/I/61UxfXTUyvL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    "description": "World’s No.1 Best Selling Gaming Gear Brand - Based on independent aggregated sales data (FEB ‘19 - FEB’20) of Gaming Keyboard, Mice, & PC Headset in units from: US, CA, CN, JP, KR, TW, TH, ID, DE, FR, RU, UK, SE.",
+    "price": "$29.54",
+    "total_reviews": "6049",
+    "created_at": "2021-05-19T19:19:31Z",
+    "updated_at": "2021-05-19T19:19:37Z"
     }
+
 ```
 
 ## Success Response:
@@ -146,14 +149,14 @@ It contains apis in Golang to scrape web pages and persist them in mysql db.
 
 ```json
 {
-    "ID": 7,
-    "CreatedAt": "2021-05-19T18:58:06Z",
-    "UpdatedAt": "2021-05-19T19:02:44.203Z",
-    "Title": "Logitech G203 Wired Gaming Mouse, 8,000 DPI, Rainbow Optical Effect LIGHTSYNC RGB, 6 Programmable Buttons, On-Board Memory, Screen Mapping, PC/Mac Computer and Laptop Compatible - Black",
-    "ImageURL": "https://images-na.ssl-images-amazon.com/images/I/61UxfXTUyvL.__AC_SX300_SY300_QL70_ML2_.jpg",
-    "Description": "World’s No.1 Best Selling Gaming Gear Brand - Based on independent aggregated sales data (FEB ‘19 - FEB’20) of Gaming Keyboard, Mice, & PC Headset in units from: US, CA, CN, JP, KR, TW, TH, ID, DE, FR, RU, UK, SE.",
-    "Price": "$29.54",
-    "TotalReviews": "6049"
+    "id": 7,
+    "title": "Logditedsdfsdfdsch G203 Wired Gaming Mouse, 8,000 DPI, Rainbow Optical Effect LIGHTSYNC RGB, 6 Programmable dasdsdButtonsd, Onsadasd-Board Memory, Screen Mapping, PC/Mac Computer and Laptop Compatible - Black",
+    "image_url": "https:d//images-nasasda.ssldsfsdf-images-amazon.com/images/I/61UxfXTUyvL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    "description": "World’s No.1 Best Selling Gaming Gear Brand - Based on independent aggregated sales data (FEB ‘19 - FEB’20) of Gaming Keyboard, Mice, & PC Headset in units from: US, CA, CN, JP, KR, TW, TH, ID, DE, FR, RU, UK, SE.",
+    "price": "$29.54",
+    "total_reviews": "6049",
+    "created_at": "2021-05-19 19:19:31 +0000 UTC",
+    "updated_at": "2021-05-19 19:35:41.618 +0000 UTC"
 }
 ```
 
