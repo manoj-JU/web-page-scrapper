@@ -149,7 +149,6 @@ It contains apis in Golang to scrape web pages and persist them in mysql db.
     "ID": 7,
     "CreatedAt": "2021-05-19T18:58:06Z",
     "UpdatedAt": "2021-05-19T19:02:44.203Z",
-    "DeletedAt": null,
     "Title": "Logitech G203 Wired Gaming Mouse, 8,000 DPI, Rainbow Optical Effect LIGHTSYNC RGB, 6 Programmable Buttons, On-Board Memory, Screen Mapping, PC/Mac Computer and Laptop Compatible - Black",
     "ImageURL": "https://images-na.ssl-images-amazon.com/images/I/61UxfXTUyvL.__AC_SX300_SY300_QL70_ML2_.jpg",
     "Description": "World’s No.1 Best Selling Gaming Gear Brand - Based on independent aggregated sales data (FEB ‘19 - FEB’20) of Gaming Keyboard, Mice, & PC Headset in units from: US, CA, CN, JP, KR, TW, TH, ID, DE, FR, RU, UK, SE.",
