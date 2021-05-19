@@ -94,6 +94,7 @@ func R2MAmazonProduct(req *AmazonProduct) *models.AmazonProduct {
 // M2RAmazonProduct converts the amazonProduct db model from request to amazonProduct
 func M2RAmazonProduct(req *models.AmazonProduct) *AmazonProduct {
 	return &AmazonProduct{
+		ID:           int64(req.ID),
 		Title:        req.Title,
 		ImageURL:     req.ImageURL,
 		Description:  req.Description,
