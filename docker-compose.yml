@@ -1,0 +1,56 @@
+version: '3'
+
+# Define services
+services:
+  db_persistor_service:
+    build:
+      db-persistor
+    ports:
+      - "8621:8080"
+    restart: unless-stopped
+    depends_on: 
+      - mysql-service
+    environment: #setting up environment variables from .env file
+      DB_USERNAME: "${DB_USERNAME}"
+      DB_PASSWORD: "${DB_PASSWORD}"
+      DB_DB_NAME: "${DB_DB_NAME}"
+      DB_HOST: "${DB_HOST}"
+      DB_TABLE: "${DB_TABLE}"
+      DB_PORT: "${DB_PORT}"
+    networks:
+      - temp_network
+
+  amazon_scrapper_service:
+    build:
+      amazon-scrapper
+    ports:
+      - "8121:8080"
+    restart: unless-stopped
+    depends_on: 
+      - db_persistor_service
+    networks:
+      - temp_network
+
+  mysql-service:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports: 
+      - "3444:3306"
+    restart: always
+    environment: #setting up environment variables from .env file
+      MYSQL_ROOT_USER: "${DB_USERNAME}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_DATABASE: "${DB_DB_NAME}"
+      MYSQL_USER: "${DB_USERNAME}"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+    networks: 
+      - temp_network
+    command: --init-file /data/application/init.sql #creating database & table from init.sql file
+    volumes:
+        - ./init.sql:/data/application/init.sql
+
+
+#define networks
+networks:
+  temp_network:    
+    driver: bridge
