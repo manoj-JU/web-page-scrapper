@@ -41,17 +41,19 @@ func CreateAmazonProductHandler(w http.ResponseWriter, r *http.Request) {
 		result = db.Create(&amazonProductModel)
 		if result.Error != nil {
 			utils.HandleError(result.Error, http.StatusInternalServerError, w)
+			return
 		}
+
 	} else {
 		//update existing record
 		result = db.Save(&amazonProductModel)
 		if result.Error != nil {
 			utils.HandleError(result.Error, http.StatusInternalServerError, w)
+			return
 		}
 	}
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(&amazonProductModel)
-
 }
 
 // Get all amazon products
@@ -64,6 +66,7 @@ func GetAmazonProductsHanlder(w http.ResponseWriter, r *http.Request) {
 	// if there is an error opening the connection, handle it
 	if err != nil {
 		utils.HandleError(err, http.StatusInternalServerError, w)
+		return
 	}
 
 	amazonProducts := []AmazonProduct{}
@@ -71,6 +74,7 @@ func GetAmazonProductsHanlder(w http.ResponseWriter, r *http.Request) {
 	result := db.Find(&amazonProducts)
 	if result.Error != nil {
 		utils.HandleError(result.Error, http.StatusInternalServerError, w)
+		return
 	}
 
 	json.NewEncoder(w).Encode(amazonProducts)
