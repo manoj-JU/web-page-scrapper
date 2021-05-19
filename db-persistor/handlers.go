@@ -53,7 +53,7 @@ func CreateAmazonProductHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode(&amazonProductModel)
+	json.NewEncoder(w).Encode(M2RAmazonProduct(amazonProductModel))
 }
 
 // Get all amazon products
@@ -88,5 +88,18 @@ func R2MAmazonProduct(req *AmazonProduct) *models.AmazonProduct {
 		Description:  req.Description,
 		Price:        req.Price,
 		TotalReviews: req.TotalReviews,
+	}
+}
+
+// M2RAmazonProduct converts the amazonProduct db model from request to amazonProduct
+func M2RAmazonProduct(req *models.AmazonProduct) *AmazonProduct {
+	return &AmazonProduct{
+		Title:        req.Title,
+		ImageURL:     req.ImageURL,
+		Description:  req.Description,
+		Price:        req.Price,
+		TotalReviews: req.TotalReviews,
+		CreatedAt:    req.CreatedAt.String(),
+		UpdatedAt:    req.UpdatedAt.String(),
 	}
 }

@@ -63,19 +63,6 @@ func CallDBPersistAPI(amazonProduct *AmazonProduct) error {
 	if err != nil {
 		return err
 	}
-
-	mp := make(map[string]interface{})
-	err = json.Unmarshal(body, &mp)
-	if err != nil {
-		return err
-	}
-
-	if val, ok := mp["CreatedAt"]; ok {
-		amazonProduct.CreatedAt = val.(string)
-	}
-	if val, ok := mp["UpdatedAt"]; ok {
-		amazonProduct.UpdatedAt = val.(string)
-	}
 	return nil
 }
 
