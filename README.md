@@ -33,7 +33,7 @@ It contains apis in Golang to scrape web pages and persist them in mysql db.
 
 **Condition:** valid web page provided is valid.
 
-**Code:** `201 OK`
+**Code:** `201 Created`
 
 
 **Content Example:**
@@ -142,7 +142,7 @@ It contains apis in Golang to scrape web pages and persist them in mysql db.
 
 **Condition:** valid web page provided is valid.
 
-**Code:** `201 OK`
+**Code:** `201 Created`
 
 
 **Content Example:**
